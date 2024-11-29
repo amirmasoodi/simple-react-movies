@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'Sahel';
+	font-weight: 500;
+	src: url('./fonts/Sahel-FD.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Sahel';
+	font-weight: 700;
+	src: url('./fonts/Sahel-Bold-FD.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Sahel';
+	font-weight: 900;
+	src: url('./fonts/Sahel-Black-FD.woff2') format('woff2');
+}
+
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 1.5rem 0 1.5rem;
+}
+
+body {
+	font-family: 'Sahel';
+}
+
+.pc-global-progress-bar {
+	animation: progress 2s infinite;
+}
+
+@keyframes progress {
+	0% {
+		width: 0;
+	}
+	50% {
+		width: 50%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+.pc-global-loading-spinner {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	width: 36px;
+	height: 36px;
+	border: 4px solid rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+	border-top-color: #000;
+	animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
